@@ -255,7 +255,7 @@ export default function TicketForm({submit, cancel, formHeight, restrictHeight, 
                     description='Once the ticket is to your liking, click the "save" button to download an image.'
                     open={dialogOpen}
                     onOpenChange={(state) => setDialogOpen(state)}
-                    className="w-[90vw] min-w-[1332px] h-max min-h-[684px]"
+                    className="w-[1332px] h-max min-h-[684px]"
                     content={(
                         <div className="column w-full h-full justify-between items-center leading-none">
                             <div id="ticket-element" className="w-[1300px] h-[652px] relative bg-white">

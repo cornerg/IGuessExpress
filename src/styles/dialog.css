@@ -7,6 +7,7 @@
 }
 
 .DialogContent {
+    max-width: calc(100vw - 16px);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -17,9 +18,9 @@
     border-radius: 8px;
     box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.2);
     position: fixed;
-    top: 50%;
+    top: 16px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .DialogContent:focus {
@@ -43,9 +44,6 @@
     align-items: center;
     justify-content: center;
     color: rgba(0, 187, 167, 1);
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background-color: rgba(0, 187, 167, 0.2);
     cursor: pointer;
 }
