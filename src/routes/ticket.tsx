@@ -3,6 +3,7 @@ import "../styles/ticket.css";
 import * as React from "react";
 import IGEButton from "../components/IGEButton.tsx";
 import TicketForm from "../components/ticketForm.tsx";
+import * as htmlToImage from 'html-to-image';
 
 const BUTTON_HEIGHT = 48;
 const FORM_HEIGHT = 708;
@@ -42,11 +43,25 @@ function Ticket() {
     }, [isTransitioning]);
 
     const submit = React.useCallback(() => {
-        closeForm();
-    }, [closeForm]);
+        const element = document.getElementById("ticket-element")
+        if (!element) {
+            console.error("Could not find a ticket element.");
+            return;
+        }
+        htmlToImage
+            .toPng(element)
+            .then((dataUrl) => {
+                const link = document.createElement('a')
+                link.download = 'my-image-name.png'
+                link.href = dataUrl
+                link.click()
+            }).catch((err) => {
+                console.log(err)
+            });
+    }, []);
 
     const cancel = React.useCallback(() => {
-        closeForm();
+        closeForm().then(() => console.log("Form reset."));
     }, [closeForm]);
 
     return (
