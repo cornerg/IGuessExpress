@@ -1,0 +1,13 @@
+.SelectTrigger {
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(16px);
+}
+
+.SelectContent {
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(16px);
+}
+
+.SelectItem {
+
+}

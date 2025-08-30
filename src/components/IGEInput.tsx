@@ -1,5 +1,6 @@
 import React, {type ChangeEvent} from "react";
 import clsx from "clsx";
+import "../styles/input.css";
 
 interface Props extends Omit<React.HTMLProps<HTMLInputElement>, "onChange"> {
     limit?: number;
@@ -23,7 +24,7 @@ export default function IGEInput({limit, className, onChange, value, isInvalid, 
     const handleChange = React.useCallback((event: ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value;
         if (onChange) {
-            if (typeof newValue === "string" && (limit && (limit ?? 0) > 0) && newValue.length > limit) {
+            if ((limit && (limit ?? 0) > 0) && newValue.length > limit) {
                 onChange(newValue.substring(0, limit));
             } else {
                 onChange(newValue);
@@ -34,9 +35,9 @@ export default function IGEInput({limit, className, onChange, value, isInvalid, 
     return (
         <div
             className={clsx(
-                "row relative border-1 rounded-md min-h-8 h-8 transition-colors",
+                "IGEInput row relative border-1 rounded-md min-h-8 h-8 transition-colors",
                 {
-                    "border-gray-300": !isFocused,
+                    "border-gray-600": !isFocused,
                     "border-teal-500": isFocused,
                     "border-red-500": isInvalid,
                 },
