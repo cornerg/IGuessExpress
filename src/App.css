@@ -1,31 +1,33 @@
-html, * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-}
+@layer utilities {
+  html, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
 
-html, #root, body, #wrapper {
-  width: 100%;
-  height: max-content;
-  min-height: 100vh;
-}
+  html, #root, body, #wrapper {
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+  }
 
-#root {
-  position: relative;
-}
+  #root {
+    position: relative;
+  }
 
-#wrapper {
-  top: 0;
-  padding: 5rem 1rem 2rem;
-  background-size: cover;
-  background-position: top;
-}
+  #wrapper {
+    top: 0;
+    padding: 4rem 1rem 2rem;
+    background-size: cover;
+    background-position: top;
+  }
 
-:where(.page) {
-  max-width: 768px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  :where(.page) {
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
