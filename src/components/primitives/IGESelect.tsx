@@ -1,6 +1,6 @@
 import { Select } from "radix-ui";
 import {RxChevronDown, RxChevronUp} from "react-icons/rx";
-import "../styles/select.css";
+import "../../styles/select.css";
 import clsx from "clsx";
 import React from "react";
 
@@ -25,7 +25,7 @@ export default function IGESelect({options, value, onChange, className, style, d
 
     const width = React.useMemo(() => {
         return trigger.current?.getBoundingClientRect()?.width ?? 64;
-    }, [trigger.current]);
+    }, [trigger]);
 
     return (
         <Select.Root

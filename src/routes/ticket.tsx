@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import "../styles/ticket.css";
 import * as React from "react";
-import IGEButton from "../components/IGEButton.tsx";
+import IGEButton from "../components/primitives/IGEButton.tsx";
 import TicketForm from "../components/ticketForm.tsx";
 import * as htmlToImage from 'html-to-image';
 
