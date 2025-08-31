@@ -59,6 +59,13 @@ export default function Header() {
                                     This app was created purely with React by <strong>Jess I Guess</strong>, and the original pitch for the idea was created by <strong>Aven</strong>. For privacy, further contact info for these users is not displayed here, but can be found on the Discord server.
                                 </p>
                             </div>
+
+                            <div className="column w-full h-max gap-0">
+                                <h3 className="font-bold">I have a problem with this app.</h3>
+                                <p className="text-[0.875rem]">
+                                    If you've encountered a bug or have requests for the app (such as identities that you want to be added), please send a request on the Discord server. This service exists for the purpose of the Discord server, so we are unable to assist users who somehow reach this app without being part of the server.
+                                </p>
+                            </div>
                         </div>
                     )}
                 />

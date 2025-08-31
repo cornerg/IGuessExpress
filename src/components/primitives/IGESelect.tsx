@@ -23,9 +23,7 @@ interface Props extends Omit<React.HTMLAttributes<HTMLButtonElement>, "onChange"
 export default function IGESelect({options, value, onChange, className, style, disabled, placeholder, ...props}: Props) {
     const trigger = React.useRef<HTMLButtonElement>(null);
 
-    const width = React.useMemo(() => {
-        return trigger.current?.getBoundingClientRect()?.width ?? 64;
-    }, [trigger]);
+    const width = trigger.current?.getBoundingClientRect()?.width ?? 64;
 
     return (
         <Select.Root
