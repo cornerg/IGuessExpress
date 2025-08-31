@@ -1,6 +1,6 @@
 import { Tooltip } from "radix-ui";
 import React from "react";
-import "../styles/tooltip.css";
+import "../../styles/tooltip.css";
 
 interface Props {
     content: string;

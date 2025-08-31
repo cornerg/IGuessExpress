@@ -1,6 +1,6 @@
 import React, {type ChangeEvent} from "react";
 import clsx from "clsx";
-import "../styles/input.css";
+import "../../styles/input.css";
 
 interface Props extends Omit<React.HTMLProps<HTMLInputElement>, "onChange"> {
     limit?: number;

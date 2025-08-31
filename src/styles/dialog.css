@@ -8,6 +8,7 @@
 
 .DialogContent {
     max-width: calc(100vw - 16px);
+    max-height: calc(100vh - 32px);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -28,6 +29,7 @@
 }
 
 .DialogTitle {
+    max-width: calc(100% - 42px);
     margin: 0;
     font-family: "Noto Serif", serif;
     font-weight: 500;
